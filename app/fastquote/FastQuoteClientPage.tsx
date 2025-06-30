@@ -1,13 +1,13 @@
 "use client"
 
-import { usePathname } from "next/navigation"
+import { useState, useEffect } from "react"
 import { Container } from "@/components/ui/container"
 import Link from "next/link"
 import Script from "next/script"
-import { useState, useEffect } from "react"
 
 export default function FastQuoteClientPage() {
   const [showFallback, setShowFallback] = useState(false)
+  const [isScriptLoaded, setIsScriptLoaded] = useState(false)
 
   return (
     <>
@@ -21,13 +21,38 @@ export default function FastQuoteClientPage() {
         `}
       </Script>
 
-      {/* Load Roofle slideout widget */}
+      {/* Load Roofle slide-out widget */}
       <Script
         src="https://app.roofle.com/roof-quote-pro-widget.js?id=TyenXTFKs3GstadLv13T3"
         strategy="afterInteractive"
-        onLoad={() => console.log("Roofle slideout widget loaded")}
+        onLoad={() => console.log("✅ Roofle slide-out widget loaded")}
         onError={(e) => {
-          console.error("Roofle slideout widget failed:", e)
+          console.error("❌ Roofle slide-out widget failed", e)
+          setShowFallback(true)
+        }}
+      />
+
+      {/* Load embedded Roofle widget */}
+      <Script
+        src="https://app.roofle.com/roof-quote-pro-embedded-widget.js?id=TyenXTFKs3GstadLv13T3"
+        strategy="afterInteractive"
+        onLoad={() => {
+          console.log("✅ Roofle embedded widget script loaded")
+          setIsScriptLoaded(true)
+
+          const container = document.getElementById("roof-quote-pro-embedded")
+          const alreadyLoaded = container?.querySelector("iframe")
+
+          if (container && !alreadyLoaded && window.RoofQuotePro) {
+            console.log("🚀 Initializing Roofle embedded widget")
+            window.RoofQuotePro.init({
+              containerId: "roof-quote-pro-embedded",
+              widgetId: "TyenXTFKs3GstadLv13T3"
+            })
+          }
+        }}
+        onError={(e) => {
+          console.error("❌ Embedded Roofle widget failed", e)
           setShowFallback(true)
         }}
       />
@@ -35,17 +60,26 @@ export default function FastQuoteClientPage() {
       <div className="min-h-screen bg-gray-50">
         <main className="py-8">
           <Container>
-            {/* Primary Widget Container - Roofle widget will load here */}
+            <div className="max-w-4xl mx-auto text-center mb-6">
+              <h1 className="text-4xl font-bold mb-4">Get Your Instant Roof Quote</h1>
+              <p className="text-xl text-gray-600">
+                Enter your address below to see an aerial view of your roof and get an instant estimate.
+              </p>
+            </div>
+
+            {/* Embedded Widget Container */}
             <div className="w-full max-w-6xl mx-auto mb-12">
               <div
                 id="roof-quote-pro-embedded"
-                className="w-full min-h-[800px]"
-                dangerouslySetInnerHTML={{
-                  __html: `
-                    <script src="https://app.roofle.com/roof-quote-pro-embedded-widget.js?id=TyenXTFKs3GstadLv13T3" async></script>
-                  `
-                }}
-              />
+                className="w-full min-h-[800px] bg-white rounded-lg shadow-sm p-4"
+              >
+                {!isScriptLoaded && (
+                  <div className="text-center text-gray-600">
+                    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
+                    <p>Loading Roof Quote widget...</p>
+                  </div>
+                )}
+              </div>
             </div>
 
             {/* Fallback message */}
@@ -57,7 +91,7 @@ export default function FastQuoteClientPage() {
               </div>
             )}
 
-            {/* Alternative Access Methods */}
+            {/* Alternative Access */}
             <div className="mt-8 text-center">
               <div className="bg-white p-6 rounded-lg shadow-sm mb-6">
                 <h3 className="text-lg font-semibold mb-4">Need Help Getting Your Quote?</h3>
@@ -98,19 +132,13 @@ export default function FastQuoteClientPage() {
         </footer>
       </div>
 
-      {/* Widget monitoring */}
+      {/* Optional monitoring */}
       <Script id="widget-monitor" strategy="afterInteractive">
         {`
-          // Monitor widget messages
           window.addEventListener('message', (event) => {
             if (event.origin.includes('roofle.com')) {
               console.log('📨 Roofle widget message:', event.data);
             }
-          });
-          
-          // Log when widget loads
-          window.addEventListener('load', () => {
-            console.log('🚀 Page loaded, Roofle widget should be initializing...');
           });
         `}
       </Script>
