@@ -1,9 +1,10 @@
 "use client"
 
+import { usePathname } from "next/navigation"
 import { Container } from "@/components/ui/container"
 import Link from "next/link"
 import Script from "next/script"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 export default function FastQuoteClientPage() {
   const [showFallback, setShowFallback] = useState(false)
