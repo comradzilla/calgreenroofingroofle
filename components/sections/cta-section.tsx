@@ -11,7 +11,7 @@ export default function CTASection() {
             Ready to Get Started with Your Roofing Project?
           </h2>
           <p className="text-white text-lg mb-8 max-w-2xl mx-auto">
-            Contact CALGREEN ROOFING today for a free, no-obligation quote. Our team of experts is ready to help with
+            Contact Cal Green Roofing today for a free, no-obligation quote. Our team of experts is ready to help with
             all your roofing needs throughout Southern California. We provide detailed estimates and transparent
             pricing.
           </p>

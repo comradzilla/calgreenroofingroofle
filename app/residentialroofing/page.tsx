@@ -5,7 +5,7 @@ import { CTAButton } from "@/components/ui/cta-button"
 import { Check } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Residential Roofing Services in Southern California | CALGREEN ROOFING",
+  title: "Residential Roofing Services in Southern California | Cal Green Roofing",
   description:
     "Expert residential roofing services in Southern California. We offer shingle, tile, metal, and flat roofing installation, replacement, and repair with premium materials and craftsmanship.",
   keywords:
@@ -19,7 +19,7 @@ export default function ResidentialRoofingPage() {
       <section className="relative w-full h-[400px]">
         <Image
           src="/residential-roofing.jpg"
-          alt="Beautiful residential home with new roof installed by CALGREEN ROOFING in Southern California"
+          alt="Beautiful residential home with new roof installed by Cal Green Roofing in Southern California"
           fill
           className="object-cover"
           priority
@@ -45,7 +45,7 @@ export default function ResidentialRoofingPage() {
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6">Expert Residential Roofing Solutions</h2>
               <p className="mb-4">
-                At CALGREEN ROOFING, we understand that your roof is one of the most important components of your home,
+                At Cal Green Roofing, we understand that your roof is one of the most important components of your home,
                 providing protection, energy efficiency, and curb appeal. Our comprehensive residential roofing services
                 are designed to meet the unique needs of Southern California homeowners.
               </p>
@@ -231,7 +231,7 @@ export default function ResidentialRoofingPage() {
                   {
                     question: "Do you offer warranties on residential roofing?",
                     answer:
-                      "Yes, we offer manufacturer warranties on all roofing materials, which typically range from 25 years to lifetime coverage depending on the product. Additionally, CALGREEN ROOFING provides a 10-year workmanship warranty on all installations, giving you peace of mind that your investment is protected.",
+                      "Yes, we offer manufacturer warranties on all roofing materials, which typically range from 25 years to lifetime coverage depending on the product. Additionally, Cal Green Roofing provides a 10-year workmanship warranty on all installations, giving you peace of mind that your investment is protected.",
                   },
                   {
                     question: "Is financing available for residential roof replacement?",
@@ -259,7 +259,7 @@ export default function ResidentialRoofingPage() {
                 GET INSTANT QUOTE
               </CTAButton>
               <CTAButton
-                href="tel:888-422-5476"
+                href="tel:888-665-3994422-5476"
                 className="w-full bg-secondary text-primary hover:bg-secondary/90"
                 size="lg"
               >
@@ -303,7 +303,7 @@ export default function ResidentialRoofingPage() {
           <div className="text-center">
             <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Home with a New Roof?</h2>
             <p className="text-white text-lg mb-8 max-w-2xl mx-auto">
-              Contact CALGREEN ROOFING today for a free consultation and quote. Our residential roofing experts are
+              Contact Cal Green Roofing today for a free consultation and quote. Our residential roofing experts are
               ready to help you enhance your home's protection, efficiency, and curb appeal.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">

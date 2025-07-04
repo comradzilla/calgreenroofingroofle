@@ -10,14 +10,14 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ subsets: ["latin"], display: "swap" })
 
 export const metadata: Metadata = {
-  title: "CALGREEN ROOFING | Professional Roofing Services in Southern California",
+  title: "Cal Green Roofing | Professional Roofing Services in Southern California",
   description:
-    "CALGREEN ROOFING provides top-quality residential and commercial roofing services throughout Southern California. Free quotes available at (888) 422-5476.",
+    "Cal Green Roofing provides top-quality residential and commercial roofing services throughout Southern California. Free quotes available at (888) 422-5476.",
   keywords:
     "roofing, roof repair, roof replacement, commercial roofing, residential roofing, Southern California, Los Angeles, San Diego, Orange County, Riverside, San Bernardino, Ventura, roofing contractor, roof installation, roof inspection, emergency roof repair",
-  authors: [{ name: "CALGREEN ROOFING" }],
-  creator: "CALGREEN ROOFING",
-  publisher: "CALGREEN ROOFING",
+  authors: [{ name: "Cal Green Roofing" }],
+  creator: "Cal Green Roofing",
+  publisher: "Cal Green Roofing",
   robots: {
     index: true,
     follow: true,
@@ -33,22 +33,22 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://calgreenroofing.com",
-    title: "CALGREEN ROOFING | Professional Roofing Services in Southern California",
+    title: "Cal Green Roofing | Professional Roofing Services in Southern California",
     description:
-      "CALGREEN ROOFING provides top-quality residential and commercial roofing services throughout Southern California. Get your free instant quote today!",
-    siteName: "CALGREEN ROOFING",
+      "Cal Green Roofing provides top-quality residential and commercial roofing services throughout Southern California. Get your free instant quote today!",
+    siteName: "Cal Green Roofing",
     images: [
       {
         url: "https://calgreenroofing.com/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "CALGREEN ROOFING - Professional Roofing Services",
+        alt: "Cal Green Roofing - Professional Roofing Services",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "CALGREEN ROOFING | Professional Roofing Services",
+    title: "Cal Green Roofing | Professional Roofing Services",
     description: "Top-quality roofing services in Southern California. Free instant quotes available.",
     images: ["https://calgreenroofing.com/images/og-image.jpg"],
     creator: "@calgreenroofing",
@@ -102,7 +102,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "RoofingContractor",
-              name: "CALGREEN ROOFING",
+              name: "Cal Green Roofing",
               image: "https://calgreenroofing.com/logo.png",
               url: "https://calgreenroofing.com",
               telephone: "(888) 422-5476",

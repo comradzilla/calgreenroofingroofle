@@ -18,7 +18,7 @@ export default function Hero() {
             <div className="text-white">
               <h1 className="text-4xl md:text-5xl font-bold mb-4">Professional Roofing Services You Can Trust</h1>
               <p className="text-xl mb-8">
-                CALGREEN ROOFING provides top-quality roofing solutions for residential and commercial properties.
+                Cal Green Roofing provides top-quality roofing solutions for residential and commercial properties.
               </p>
               <div className="hidden md:flex flex-col sm:flex-row gap-4">
                 <Button size="lg" className="bg-[#2e7d32] hover:bg-[#1b5e20] text-white">

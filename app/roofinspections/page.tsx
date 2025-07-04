@@ -5,7 +5,7 @@ import { CTAButton } from "@/components/ui/cta-button"
 import { Check, ArrowRight, ClipboardCheck } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Professional Roof Inspection Services in Southern California | CALGREEN ROOFING",
+  title: "Professional Roof Inspection Services in Southern California | Cal Green Roofing",
   description:
     "Thorough roof inspections in Southern California to identify issues before they become costly problems. Detailed reports and maintenance recommendations for all roof types.",
   keywords:
@@ -18,7 +18,7 @@ export default function RoofInspectionsPage() {
       {/* Hero Section */}
       <section className="relative w-full h-[400px]">
         <Image
-          src="/roof-inspections.jpg"
+          src="https://images.unsplash.com/photo-1751578159930-e701cf1c3eff?q=80&w=1631&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Professional roof inspector examining a residential roof in Southern California"
           fill
           className="object-cover"
@@ -45,7 +45,7 @@ export default function RoofInspectionsPage() {
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6">Professional Roof Inspection Services</h2>
               <p className="mb-4">
-                CALGREEN ROOFING provides comprehensive roof inspection services for residential and commercial
+                Cal Green Roofing provides comprehensive roof inspection services for residential and commercial
                 properties throughout Southern California. Our detailed inspections help identify potential issues
                 before they develop into costly problems, allowing you to make informed decisions about maintenance,
                 repairs, or replacement.
@@ -333,7 +333,7 @@ export default function RoofInspectionsPage() {
                 GET INSTANT QUOTE
               </CTAButton>
               <CTAButton
-                href="tel:888-422-5476"
+                href="tel:888-665-3994422-5476"
                 className="w-full bg-secondary text-primary hover:bg-secondary/90"
                 size="lg"
               >
@@ -379,7 +379,7 @@ export default function RoofInspectionsPage() {
               Protect Your Investment with Regular Roof Inspections
             </h2>
             <p className="text-white text-lg mb-8 max-w-2xl mx-auto">
-              Contact CALGREEN ROOFING today to schedule a comprehensive roof inspection. Our detailed assessment will
+              Contact Cal Green Roofing today to schedule a comprehensive roof inspection. Our detailed assessment will
               help you make informed decisions about your roof's maintenance and care.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">

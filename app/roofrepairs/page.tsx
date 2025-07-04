@@ -5,7 +5,7 @@ import { CTAButton } from "@/components/ui/cta-button"
 import { Check, ArrowRight, AlertTriangle } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Professional Roof Repair Services in Southern California | CALGREEN ROOFING",
+  title: "Professional Roof Repair Services in Southern California | Cal Green Roofing",
   description:
     "Fast, reliable roof repair services in Southern California. We fix leaks, storm damage, and worn roofing to extend your roof's lifespan and prevent costly water damage.",
   keywords:
@@ -45,7 +45,7 @@ export default function RoofRepairsPage() {
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6">Expert Roof Repair Solutions</h2>
               <p className="mb-4">
-                At CALGREEN ROOFING, we understand that roof damage requires prompt, professional attention to prevent
+                At Cal Green Roofing, we understand that roof damage requires prompt, professional attention to prevent
                 more extensive and costly problems. Our comprehensive roof repair services address issues ranging from
                 minor leaks to significant storm damage for both residential and commercial properties throughout
                 Southern California.
@@ -266,7 +266,7 @@ export default function RoofRepairsPage() {
               </div>
 
               <p>
-                If you notice any of these signs, contact CALGREEN ROOFING for a professional inspection. Early
+                If you notice any of these signs, contact Cal Green Roofing for a professional inspection. Early
                 intervention can prevent minor issues from becoming major problems that require more extensive and
                 expensive repairs.
               </p>
@@ -299,7 +299,7 @@ export default function RoofRepairsPage() {
                   {
                     question: "Do you provide warranties on roof repairs?",
                     answer:
-                      "Yes, CALGREEN ROOFING provides a 1-year workmanship warranty on all roof repairs. This covers any issues arising from the quality of our repair work. Additionally, any new materials installed during the repair process will be covered by the manufacturer's warranty. We stand behind our work and are committed to your complete satisfaction with our repair services.",
+                      "Yes, Cal Green Roofing provides a 1-year workmanship warranty on all roof repairs. This covers any issues arising from the quality of our repair work. Additionally, any new materials installed during the repair process will be covered by the manufacturer's warranty. We stand behind our work and are committed to your complete satisfaction with our repair services.",
                   },
                 ].map((faq, index) => (
                   <div key={index} className="border-b border-gray-200 pb-6 last:border-0 last:pb-0">
@@ -323,7 +323,7 @@ export default function RoofRepairsPage() {
                 GET INSTANT QUOTE
               </CTAButton>
               <CTAButton
-                href="tel:888-422-5476"
+                href="tel:888-665-3994422-5476"
                 className="w-full bg-secondary text-primary hover:bg-secondary/90"
                 size="lg"
               >
@@ -367,7 +367,7 @@ export default function RoofRepairsPage() {
           <div className="text-center">
             <h2 className="text-3xl font-bold text-white mb-4">Don't Let Roof Damage Get Worse</h2>
             <p className="text-white text-lg mb-8 max-w-2xl mx-auto">
-              Contact CALGREEN ROOFING today for fast, reliable roof repairs. Our experienced team is ready to restore
+              Contact Cal Green Roofing today for fast, reliable roof repairs. Our experienced team is ready to restore
               your roof's integrity and protect your property.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">

@@ -96,7 +96,7 @@ export default function HeroSection() {
                 Professional Roofing Services <span className="text-secondary">You Can Trust</span>
               </h1>
               <p className="text-xl md:text-2xl mb-10 max-w-3xl mx-auto">
-                CALGREEN ROOFING provides top-quality roofing solutions for residential and commercial properties
+                Cal Green Roofing provides top-quality roofing solutions for residential and commercial properties
                 throughout Southern California. With over 10 years of experience, we deliver exceptional results on time
                 and within budget.
               </p>

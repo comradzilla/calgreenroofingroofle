@@ -2,9 +2,9 @@ import { Container } from "@/components/ui/container"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Free Roofing Quote | CALGREEN ROOFING",
+  title: "Free Roofing Quote | Cal Green Roofing",
   description:
-    "Request a free, no-obligation roofing quote from CALGREEN ROOFING. We provide detailed estimates for all roofing services in Southern California.",
+    "Request a free, no-obligation roofing quote from Cal Green Roofing. We provide detailed estimates for all roofing services in Southern California.",
 }
 
 export default function QuotePage() {
@@ -184,7 +184,7 @@ export default function QuotePage() {
               <label className="flex items-start">
                 <input type="checkbox" name="consent" required className="mt-1 mr-2" />
                 <span className="text-sm text-gray-700">
-                  I consent to being contacted by CALGREEN ROOFING regarding my roofing quote request. I understand my
+                  I consent to being contacted by Cal Green Roofing regarding my roofing quote request. I understand my
                   information will be used in accordance with the privacy policy.*
                 </span>
               </label>

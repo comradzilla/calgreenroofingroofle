@@ -31,10 +31,10 @@ export default function Header() {
     <header className="w-full bg-white py-4 shadow-sm sticky top-0 z-40">
       <Container>
         <div className="flex justify-between items-center">
-          <Link href="/" className="flex items-center" aria-label="CALGREEN ROOFING Home">
+          <Link href="/" className="flex items-center" aria-label="Cal Green Roofing Home">
             <Image
               src="/logo.png"
-              alt="CALGREEN ROOFING Logo"
+              alt="Cal Green Roofing Logo"
               width={200}
               height={60}
               className="h-14 w-auto"

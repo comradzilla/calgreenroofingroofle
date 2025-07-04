@@ -36,7 +36,7 @@ export default function ServicesSection() {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Our Roofing Services</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            CALGREEN ROOFING offers a complete range of roofing services to meet all your needs, from new installations
+            Cal Green Roofing offers a complete range of roofing services to meet all your needs, from new installations
             to repairs and maintenance.
           </p>
         </div>

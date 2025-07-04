@@ -46,7 +46,7 @@ export default function ServicesSection() {
             Our Roofing Services
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            CALGREEN ROOFING offers a complete range of roofing services to meet all your needs, from new installations
+            Cal Green Roofing offers a complete range of roofing services to meet all your needs, from new installations
             to repairs and maintenance throughout Southern California. Our certified professionals ensure quality
             workmanship on every project.
           </p>

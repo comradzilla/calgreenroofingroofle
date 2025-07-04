@@ -5,7 +5,7 @@ import { CTAButton } from "@/components/ui/cta-button"
 import { Check } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Commercial Roofing Services in Southern California | CALGREEN ROOFING",
+  title: "Commercial Roofing Services in Southern California | Cal Green Roofing",
   description:
     "Professional commercial roofing services for businesses throughout Southern California. We specialize in TPO, EPDM, modified bitumen, and built-up roofing systems with minimal business disruption.",
   keywords:
@@ -18,8 +18,8 @@ export default function CommercialRoofingPage() {
       {/* Hero Section */}
       <section className="relative w-full h-[400px]">
         <Image
-          src="/commercial-roofing.jpg"
-          alt="Commercial building with modern flat roof installed by CALGREEN ROOFING in Southern California"
+          src="https://images.unsplash.com/photo-1751578230731-1b92b23660da?q=80&w=1075&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Commercial building with modern flat roof installed by Cal Green Roofing in Southern California"
           fill
           className="object-cover"
           priority
@@ -45,7 +45,7 @@ export default function CommercialRoofingPage() {
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6">Professional Commercial Roofing Solutions</h2>
               <p className="mb-4">
-                CALGREEN ROOFING delivers superior commercial roofing services designed to protect your business
+                Cal Green Roofing delivers superior commercial roofing services designed to protect your business
                 investment while minimizing disruption to your operations. We understand that commercial roofing
                 projects require specialized expertise, precise planning, and efficient execution.
               </p>
@@ -264,7 +264,7 @@ export default function CommercialRoofingPage() {
                   {
                     question: "Do you offer warranties on commercial roofing systems?",
                     answer:
-                      "Yes, we offer comprehensive warranty coverage on all commercial roofing systems. Manufacturer warranties typically range from 15 to 30 years depending on the system. Additionally, CALGREEN ROOFING provides a 5-year workmanship warranty on all commercial installations. We also offer extended warranty options and maintenance programs to protect your investment long-term.",
+                      "Yes, we offer comprehensive warranty coverage on all commercial roofing systems. Manufacturer warranties typically range from 15 to 30 years depending on the system. Additionally, Cal Green Roofing provides a 5-year workmanship warranty on all commercial installations. We also offer extended warranty options and maintenance programs to protect your investment long-term.",
                   },
                   {
                     question: "Can you help with insurance claims for commercial roof damage?",
@@ -293,7 +293,7 @@ export default function CommercialRoofingPage() {
                 GET INSTANT QUOTE
               </CTAButton>
               <CTAButton
-                href="tel:888-422-5476"
+                href="tel:888-665-3994422-5476"
                 className="w-full bg-secondary text-primary hover:bg-secondary/90"
                 size="lg"
               >
@@ -337,7 +337,7 @@ export default function CommercialRoofingPage() {
           <div className="text-center">
             <h2 className="text-3xl font-bold text-white mb-4">Protect Your Business Investment</h2>
             <p className="text-white text-lg mb-8 max-w-2xl mx-auto">
-              Contact CALGREEN ROOFING today for a free consultation and quote. Our commercial roofing experts are ready
+              Contact Cal Green Roofing today for a free consultation and quote. Our commercial roofing experts are ready
               to deliver durable, energy-efficient solutions for your business.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">

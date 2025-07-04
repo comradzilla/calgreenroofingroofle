@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <Image src="/logo.png" alt="CALGREEN ROOFING" width={180} height={50} className="mb-4" />
+            <Image src="/logo.png" alt="Cal Green Roofing" width={180} height={50} className="mb-4" />
             <p className="text-gray-400 mb-4">
               Professional roofing services for residential and commercial properties. Serving all of California with
               quality and reliability.
@@ -98,7 +98,7 @@ export default function Footer() {
               <li className="flex items-start">
                 <Phone className="mr-2 h-5 w-5 text-[#ffc107] flex-shrink-0 mt-0.5" />
                 <span>
-                  <Link href="tel:888-422-5476" className="hover:text-[#ffc107]">
+                  <Link href="tel:888-665-3994422-5476" className="hover:text-[#ffc107]">
                     (888) 422-5476
                   </Link>
                 </span>
@@ -124,7 +124,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400 text-sm">
-          <p>© {new Date().getFullYear()} CALGREEN ROOFING. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Cal Green Roofing. All rights reserved.</p>
         </div>
       </div>
     </footer>

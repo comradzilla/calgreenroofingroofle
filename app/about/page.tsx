@@ -9,15 +9,15 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="relative w-full h-[400px]" aria-label="About us hero">
         <Image
-          src="https://images.unsplash.com/photo-1622993295880-b8e8c4f33897?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="CALGREEN ROOFING team working on a residential roof in Southern California"
+          src="https://images.unsplash.com/photo-1751578159931-f7e725c17df1?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Cal Green Roofing team working on a residential roof in Southern California"
           fill
           className="object-cover"
           priority
         />
         <div className="absolute inset-0 bg-black/50 flex items-center">
           <Container>
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">About CALGREEN ROOFING</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">About Cal Green Roofing</h1>
             <p className="text-xl text-white max-w-2xl">
               Your trusted partner for all roofing needs in Southern California since 2010.
             </p>
@@ -34,25 +34,25 @@ export default function AboutPage() {
                 Our Story
               </h2>
               <p className="text-gray-600 mb-4">
-                CALGREEN ROOFING was founded in 2010 with a simple mission: to provide high-quality roofing services at
+                Cal Green Roofing was founded in 2010 with a simple mission: to provide high-quality roofing services at
                 fair prices with exceptional customer service. What started as a small family business has grown into
                 one of Southern California's most trusted roofing companies.
               </p>
               <p className="text-gray-600 mb-4">
-                Our founder, John Green, began his career as a roofer and saw firsthand the need for a company that
+                Our founder, Mike Ghassemi, began his career as a roofer and saw firsthand the need for a company that
                 prioritized quality workmanship and customer satisfaction above all else. Today, that vision continues
                 to guide everything we do.
               </p>
               <p className="text-gray-600">
-                With over a decade of experience and thousands of successful projects completed, CALGREEN ROOFING has
+                With over a decade of experience and thousands of successful projects completed, Cal Green Roofing has
                 built a reputation for excellence throughout Southern California. We're proud of our history and excited
                 about our future as we continue to grow and serve more communities.
               </p>
             </div>
             <div className="relative h-[400px] rounded-lg overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="CALGREEN ROOFING team members discussing a roofing project"
+                src="https://images.unsplash.com/photo-1751578230732-7a3716a8ac43?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Cal Green Roofing team members discussing a roofing project"
                 fill
                 className="object-cover"
               />
@@ -66,7 +66,7 @@ export default function AboutPage() {
         <Container>
           <div className="text-center mb-12">
             <h2 id="why-choose-us-heading" className="text-3xl font-bold mb-4">
-              Why Choose CALGREEN ROOFING
+              Why Choose Cal Green Roofing
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               We're committed to excellence in every aspect of our business. Here's what sets us apart from other
@@ -168,7 +168,7 @@ export default function AboutPage() {
         <Container>
           <div className="text-center">
             <h2 id="cta-about-heading" className="text-3xl font-bold text-white mb-6">
-              Ready to Work with CALGREEN ROOFING?
+              Ready to Work with Cal Green Roofing?
             </h2>
             <p className="text-white text-lg mb-8 max-w-2xl mx-auto">
               Contact us today to schedule your free consultation and see why we're Southern California's trusted

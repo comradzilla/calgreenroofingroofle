@@ -5,18 +5,18 @@ import TestimonialsSection from "@/components/sections/testimonials-section"
 import CTASection from "@/components/sections/cta-section"
 
 export const metadata: Metadata = {
-  title: "Calgreen Roofing | Southern California Roof Experts",
+  title: "Cal Green Roofing | Southern California Roof Experts",
   description:
     "Expert residential and commercial roofing services in Southern California. Free estimates, fast turnaround, and trusted craftsmanship.",
   openGraph: {
-    title: "Calgreen Roofing",
+    title: "Cal Green Roofing",
     description: "Top-rated roofing in SoCal. Request a free quote today.",
     images: [
       {
         url: "https://calgreenroofing.com/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Calgreen Roofing",
+        alt: "Cal Green Roofing",
       },
     ],
     url: "https://calgreenroofing.com",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Calgreen Roofing",
+    title: "Cal Green Roofing",
     description: "Southern California roofing pros. Residential & commercial. Free estimates.",
     images: ["https://calgreenroofing.com/images/og-image.jpg"],
   },

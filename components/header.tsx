@@ -13,7 +13,7 @@ export default function Header() {
     <header className="w-full bg-white py-4 shadow-sm">
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link href="/" className="flex items-center">
-          <Image src="/logo.png" alt="CALGREEN ROOFING" width={200} height={60} className="h-14 w-auto" />
+          <Image src="/logo.png" alt="Cal Green Roofing" width={200} height={60} className="h-14 w-auto" />
         </Link>
 
         {/* Mobile menu button */}

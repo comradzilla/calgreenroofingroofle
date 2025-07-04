@@ -7,21 +7,21 @@ const testimonials = [
     name: "John Smith",
     location: "Los Angeles, CA",
     quote:
-      "CALGREEN ROOFING did an amazing job on our new roof. The team was professional, efficient, and the quality of work exceeded our expectations. They completed the job on time and left our property spotless.",
+      "Cal Green Roofing did an amazing job on our new roof. The team was professional, efficient, and the quality of work exceeded our expectations. They completed the job on time and left our property spotless.",
     rating: 5,
   },
   {
     name: "Sarah Johnson",
     location: "San Diego, CA",
     quote:
-      "We had a leak that needed urgent repair. CALGREEN ROOFING responded quickly and fixed the issue at a reasonable price. Their technician explained everything clearly and provided helpful maintenance tips.",
+      "We had a leak that needed urgent repair. Cal Green Roofing responded quickly and fixed the issue at a reasonable price. Their technician explained everything clearly and provided helpful maintenance tips.",
     rating: 5,
   },
   {
     name: "Michael Brown",
     location: "Orange County, CA",
     quote:
-      "The team at CALGREEN ROOFING was knowledgeable and helped us choose the right roofing material for our home. The installation was completed on time and on budget. We've already recommended them to our neighbors.",
+      "The team at Cal Green Roofing was knowledgeable and helped us choose the right roofing material for our home. The installation was completed on time and on budget. We've already recommended them to our neighbors.",
     rating: 4,
   },
 ]

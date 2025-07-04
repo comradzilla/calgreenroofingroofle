@@ -3,9 +3,9 @@ import { Star } from "lucide-react"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Customer Testimonials | CALGREEN ROOFING",
+  title: "Customer Testimonials | Cal Green Roofing",
   description:
-    "Read what our satisfied customers throughout Southern California have to say about CALGREEN ROOFING's professional roofing services.",
+    "Read what our satisfied customers throughout Southern California have to say about Cal Green Roofing's professional roofing services.",
 }
 
 const testimonials = [
@@ -13,42 +13,42 @@ const testimonials = [
     name: "John Smith",
     location: "Los Angeles, CA",
     quote:
-      "CALGREEN ROOFING did an amazing job on our new roof. The team was professional, efficient, and the quality of work exceeded our expectations. They completed the job on time and left our property spotless.",
+      "Cal Green Roofing did an amazing job on our new roof. The team was professional, efficient, and the quality of work exceeded our expectations. They completed the job on time and left our property spotless.",
     rating: 5,
   },
   {
     name: "Sarah Johnson",
     location: "San Diego, CA",
     quote:
-      "We had a leak that needed urgent repair. CALGREEN ROOFING responded quickly and fixed the issue at a reasonable price. Their technician explained everything clearly and provided helpful maintenance tips.",
+      "We had a leak that needed urgent repair. Cal Green Roofing responded quickly and fixed the issue at a reasonable price. Their technician explained everything clearly and provided helpful maintenance tips.",
     rating: 5,
   },
   {
     name: "Michael Brown",
     location: "Orange County, CA",
     quote:
-      "The team at CALGREEN ROOFING was knowledgeable and helped us choose the right roofing material for our home. The installation was completed on time and on budget. We've already recommended them to our neighbors.",
+      "The team at Cal Green Roofing was knowledgeable and helped us choose the right roofing material for our home. The installation was completed on time and on budget. We've already recommended them to our neighbors.",
     rating: 4,
   },
   {
     name: "Jennifer Davis",
     location: "Riverside, CA",
     quote:
-      "After getting quotes from several companies, we chose CALGREEN ROOFING for their competitive pricing and excellent reviews. They didn't disappoint! Our new roof looks fantastic and the crew was professional throughout the entire process.",
+      "After getting quotes from several companies, we chose Cal Green Roofing for their competitive pricing and excellent reviews. They didn't disappoint! Our new roof looks fantastic and the crew was professional throughout the entire process.",
     rating: 5,
   },
   {
     name: "Robert Wilson",
     location: "Long Beach, CA",
     quote:
-      "I needed my commercial building's roof replaced with minimal disruption to our business. CALGREEN ROOFING worked around our schedule and completed the project over a weekend. Excellent service and quality work.",
+      "I needed my commercial building's roof replaced with minimal disruption to our business. Cal Green Roofing worked around our schedule and completed the project over a weekend. Excellent service and quality work.",
     rating: 5,
   },
   {
     name: "Emily Martinez",
     location: "Anaheim, CA",
     quote:
-      "CALGREEN ROOFING installed solar panels on our roof and did an excellent job. They coordinated with the solar company seamlessly and ensured our roof warranty remained intact. Very professional service.",
+      "Cal Green Roofing installed solar panels on our roof and did an excellent job. They coordinated with the solar company seamlessly and ensured our roof warranty remained intact. Very professional service.",
     rating: 4,
   },
 ]
@@ -91,7 +91,7 @@ export default function TestimonialsPage() {
         <div className="mt-16 bg-primary/5 p-8 rounded-lg border border-primary/20">
           <h2 className="text-2xl font-bold mb-4 text-center">Share Your Experience</h2>
           <p className="text-center mb-8">
-            We value your feedback! If you've worked with CALGREEN ROOFING, we'd love to hear about your experience.
+            We value your feedback! If you've worked with Cal Green Roofing, we'd love to hear about your experience.
           </p>
           <form className="max-w-2xl mx-auto space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -148,7 +148,7 @@ export default function TestimonialsPage() {
                 rows={5}
                 required
                 className="w-full rounded-md border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-primary"
-                placeholder="Share your experience with CALGREEN ROOFING..."
+                placeholder="Share your experience with Cal Green Roofing..."
               ></textarea>
             </div>
             <button
