@@ -1,9 +1,16 @@
+import Script from "next/script"
 import { Phone, Mail, MapPin } from "lucide-react"
 import { Container } from "@/components/ui/container"
 
 export default function ContactPage() {
   return (
-    <div className="py-16">
+    <>
+      <Script
+        src="https://app.roofle.com/roof-quote-pro-widget.js?id=TyenXTFKs3GstadLv13T3"
+        strategy="afterInteractive"
+        async
+      />
+      <div className="py-16">
       <Container>
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold mb-4">Contact Us</h1>
@@ -60,6 +67,7 @@ export default function ContactPage() {
           </div>
         </div>
       </Container>
-    </div>
+      </div>
+    </>
   )
 }

@@ -83,24 +83,25 @@ const nextConfig = {
         ]
       },
       {
-        // Standard CSP for all other pages (more restrictive but allows necessary integrations)
+        // Standard CSP for all other pages (allows Roofle slideout widget but excludes fastquote pages)
         source: '/((?!fastquote|fastquotetest).*)',
         headers: [
           {
             key: 'Content-Security-Policy',
             value: [
               "default-src 'self' https://calgreenroofing.com https://www.calgreenroofing.com",
-              "script-src 'self' 'unsafe-inline' https://js.hsforms.net https://forms.hsforms.com https://*.hubspot.com https://www.youtube.com https://s.ytimg.com",
-              "frame-src 'self' https://forms.hsforms.com https://*.hubspot.com https://www.youtube.com https://www.youtube-nocookie.com",
-              "connect-src 'self' https://forms.hsforms.com https://*.hubspot.com https://api.hubapi.com wss://*.hubspot.com",
-              "img-src 'self' data: https: blob: https://forms.hsforms.com https://*.hubspot.com https://i.ytimg.com https://images.unsplash.com https://blob.v0.dev",
-              "style-src 'self' 'unsafe-inline' https://forms.hsforms.com https://*.hubspot.com https://fonts.googleapis.com",
-              "font-src 'self' data: https://forms.hsforms.com https://*.hubspot.com https://fonts.gstatic.com",
-              "media-src 'self' https: blob: https://www.youtube.com",
+              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.roofle.com https://app.roofle.com https://api.app.roofle.com https://js.hsforms.net https://forms.hsforms.com https://*.hubspot.com https://www.youtube.com https://s.ytimg.com",
+              "frame-src 'self' https://*.roofle.com https://app.roofle.com https://api.app.roofle.com https://forms.hsforms.com https://*.hubspot.com https://www.youtube.com https://www.youtube-nocookie.com",
+              "connect-src 'self' https://*.roofle.com https://app.roofle.com https://api.app.roofle.com wss://*.roofle.com https://forms.hsforms.com https://*.hubspot.com https://api.hubapi.com wss://*.hubspot.com",
+              "img-src 'self' data: https: blob: https://*.roofle.com https://forms.hsforms.com https://*.hubspot.com https://i.ytimg.com https://images.unsplash.com https://blob.v0.dev",
+              "style-src 'self' 'unsafe-inline' https://*.roofle.com https://forms.hsforms.com https://*.hubspot.com https://fonts.googleapis.com",
+              "font-src 'self' data: https://*.roofle.com https://forms.hsforms.com https://*.hubspot.com https://fonts.gstatic.com",
+              "media-src 'self' https: blob: https://*.roofle.com https://www.youtube.com",
               "object-src 'none'",
               "base-uri 'self'",
-              "form-action 'self' https://forms.hsforms.com https://*.hubspot.com",
-              "frame-ancestors 'self' https://calgreenroofing.com https://www.calgreenroofing.com"
+              "form-action 'self' https://*.roofle.com https://forms.hsforms.com https://*.hubspot.com",
+              "frame-ancestors 'self' https://calgreenroofing.com https://www.calgreenroofing.com",
+              "worker-src 'self' blob:"
             ].join('; ')
           },
           {

@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Script from "next/script"
 import HeroSection from "@/components/sections/hero-section"
 import ServicesSection from "@/components/sections/services-section"
 import TestimonialsSection from "@/components/sections/testimonials-section"
@@ -34,6 +35,11 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
+      <Script
+        src="https://app.roofle.com/roof-quote-pro-widget.js?id=TyenXTFKs3GstadLv13T3"
+        strategy="afterInteractive"
+        async
+      />
       <HeroSection />
       <ServicesSection />
       <TestimonialsSection />

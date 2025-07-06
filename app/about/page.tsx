@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Script from "next/script"
 import { Button } from "@/components/ui/button"
 import { CheckCircle2 } from "lucide-react"
 import { Container } from "@/components/ui/container"
@@ -6,6 +7,11 @@ import { Container } from "@/components/ui/container"
 export default function AboutPage() {
   return (
     <>
+      <Script
+        src="https://app.roofle.com/roof-quote-pro-widget.js?id=TyenXTFKs3GstadLv13T3"
+        strategy="afterInteractive"
+        async
+      />
       {/* Hero Section */}
       <section className="relative w-full h-[400px]" aria-label="About us hero">
         <Image
