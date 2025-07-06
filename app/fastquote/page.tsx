@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Script from "next/script"
 import FastQuoteClientPage from "./FastQuoteClientPage"
 
 export const metadata: Metadata = {
@@ -8,5 +9,16 @@ export const metadata: Metadata = {
 }
 
 export default function FastQuotePage() {
-  return <FastQuoteClientPage />
+  return (
+    <>
+      {/* Slideout RoofQuote PRO® Script - Goes in head */}
+      <Script
+        src="https://app.roofle.com/roof-quote-pro-widget.js?id=TyenXTFKs3GstadLv13T3"
+        strategy="afterInteractive"
+        async
+      />
+      
+      <FastQuoteClientPage />
+    </>
+  )
 }

@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Facebook, Twitter, Instagram, Mail, Phone, MapPin } from "lucide-react"
+import { Facebook, Twitter, Instagram, Mail, Phone, MapPin, FileText } from "lucide-react"
 import { Container } from "@/components/ui/container"
 
 const footerLinks = {
@@ -21,7 +21,7 @@ const footerLinks = {
   contact: [
     {
       icon: <Phone className="mr-2 h-5 w-5 text-secondary flex-shrink-0 mt-0.5" aria-hidden="true" />,
-      label: "(888) 422-5476",
+      label: "(888) 665-3994",
       href: "tel:888-665-3994422-5476",
     },
     {
@@ -33,6 +33,11 @@ const footerLinks = {
       icon: <MapPin className="mr-2 h-5 w-5 text-secondary flex-shrink-0 mt-0.5" aria-hidden="true" />,
       label: "Los Angeles, CA",
       href: "https://maps.google.com/?q=Los+Angeles,+CA",
+    },
+    {
+      icon: <FileText className="mr-2 h-5 w-5 text-secondary flex-shrink-0 mt-0.5" aria-hidden="true" />,
+      label: "Lic#: 1043927",
+      href: "#",
     },
   ],
   social: [

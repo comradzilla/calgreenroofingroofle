@@ -2,8 +2,8 @@
 
 import { Container } from "@/components/ui/container"
 import Link from "next/link"
-import { useState, useCallback } from "react"
-import RoofleScript from "@/components/roofle/RoofleScript"
+import { useState, useCallback, useEffect } from "react"
+import Script from "next/script"
 import RoofleLoader from "@/components/roofle/RoofleLoader"
 import RoofleError from "@/components/roofle/RoofleError"
 
@@ -18,13 +18,6 @@ interface WidgetState {
 }
 
 export default function FastQuoteClientPage() {
-  const [slideoutState, setSlideoutState] = useState<WidgetState>({
-    isLoaded: false,
-    isReady: false,
-    error: null,
-    retryCount: 0
-  })
-
   const [embeddedState, setEmbeddedState] = useState<WidgetState>({
     isLoaded: false,
     isReady: false,
@@ -32,50 +25,21 @@ export default function FastQuoteClientPage() {
     retryCount: 0
   })
 
-  const [slideoutKey, setSlideoutKey] = useState(0)
   const [embeddedKey, setEmbeddedKey] = useState(0)
-
-  // Slideout widget handlers
-  const handleSlideoutLoad = useCallback(() => {
-    setSlideoutState(prev => ({ ...prev, isLoaded: true, error: null }))
-  }, [])
-
-  const handleSlideoutReady = useCallback(() => {
-    setSlideoutState(prev => ({ ...prev, isReady: true }))
-  }, [])
-
-  const handleSlideoutError = useCallback((error: any) => {
-    setSlideoutState(prev => ({ 
-      ...prev, 
-      error, 
-      isLoaded: false, 
-      isReady: false 
-    }))
-  }, [])
-
-  const retrySlideout = useCallback(() => {
-    if (slideoutState.retryCount < MAX_RETRIES) {
-      setSlideoutState(prev => ({ 
-        ...prev, 
-        retryCount: prev.retryCount + 1,
-        error: null,
-        isLoaded: false,
-        isReady: false
-      }))
-      setSlideoutKey(prev => prev + 1) // Force re-render of script
-    }
-  }, [slideoutState.retryCount])
 
   // Embedded widget handlers
   const handleEmbeddedLoad = useCallback(() => {
+    console.log('Embedded widget script loaded')
     setEmbeddedState(prev => ({ ...prev, isLoaded: true, error: null }))
   }, [])
 
   const handleEmbeddedReady = useCallback(() => {
+    console.log('Embedded widget ready')
     setEmbeddedState(prev => ({ ...prev, isReady: true }))
   }, [])
 
   const handleEmbeddedError = useCallback((error: any) => {
+    console.error('Embedded widget error:', error)
     setEmbeddedState(prev => ({ 
       ...prev, 
       error, 
@@ -86,6 +50,7 @@ export default function FastQuoteClientPage() {
 
   const retryEmbedded = useCallback(() => {
     if (embeddedState.retryCount < MAX_RETRIES) {
+      console.log(`Retrying embedded widget (attempt ${embeddedState.retryCount + 1}/${MAX_RETRIES})`)
       setEmbeddedState(prev => ({ 
         ...prev, 
         retryCount: prev.retryCount + 1,
@@ -97,73 +62,184 @@ export default function FastQuoteClientPage() {
     }
   }, [embeddedState.retryCount])
 
+  // Set up timeout for embedded widget initialization
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      if (!embeddedState.isReady && !embeddedState.error) {
+        console.log('Embedded widget timeout - triggering error state')
+        handleEmbeddedError({
+          type: 'TIMEOUT',
+          message: 'Widget failed to initialize within 15 seconds',
+          timestamp: new Date().toISOString()
+        })
+      }
+    }, 15000) // 15 second timeout
+
+    return () => clearTimeout(timeout)
+  }, [embeddedState.isReady, embeddedState.error, handleEmbeddedError])
+
+  // Widget relocation effect - moves widget to correct container if it appears elsewhere
+  useEffect(() => {
+    const relocateWidget = () => {
+      const targetContainer = document.getElementById('roof-quote-pro-embedded')
+      if (!targetContainer) return
+
+      // Look for Roofle widget elements that might have been inserted elsewhere
+      const possibleSelectors = [
+        'iframe[src*="roofle.com"]',
+        'div[id*="roofle"]',
+        'div[class*="roofle"]',
+        'div[id*="roof-quote"]',
+        'div[class*="roof-quote"]'
+      ]
+
+      for (const selector of possibleSelectors) {
+        const widgets = document.querySelectorAll(selector)
+        widgets.forEach(widget => {
+          // Only move if it's not already in our target container
+          if (!targetContainer.contains(widget)) {
+            console.log('Found misplaced widget, relocating to target container:', selector)
+            targetContainer.appendChild(widget)
+            handleEmbeddedReady()
+          }
+        })
+      }
+    }
+
+    // Check immediately and then periodically
+    const interval = setInterval(relocateWidget, 1000)
+    relocateWidget()
+
+    return () => clearInterval(interval)
+  }, [handleEmbeddedReady])
+
   return (
     <>
-      {/* Load Roofle slideout widget */}
-      <RoofleScript
-        key={`slideout-${slideoutKey}`}
-        type="slideout"
-        widgetId={WIDGET_ID}
-        onLoad={handleSlideoutLoad}
-        onReady={handleSlideoutReady}
-        onError={handleSlideoutError}
-      />
+      {/* CSS to force proper widget positioning */}
+      <style jsx global>{`
+        /* Force any Roofle widget elements to appear in our container */
+        #roof-quote-pro-embedded iframe {
+          width: 100% !important;
+          height: 800px !important;
+          border: none !important;
+          display: block !important;
+        }
+        
+        /* Hide any widgets that appear outside our container */
+        body > iframe[src*="roofle.com"]:not(#roof-quote-pro-embedded iframe),
+        body > div[id*="roofle"]:not(#roof-quote-pro-embedded *),
+        body > div[class*="roofle"]:not(#roof-quote-pro-embedded *) {
+          display: none !important;
+        }
+        
+        /* Ensure our container is properly positioned */
+        #roof-quote-pro-embedded {
+          position: relative !important;
+          z-index: 1 !important;
+        }
+      `}</style>
 
-      {/* Load Roofle embedded widget */}
-      <RoofleScript
+      {/* Embedded RoofQuote PRO® Script - Goes in body */}
+      <Script
         key={`embedded-${embeddedKey}`}
-        type="embedded"
-        widgetId={WIDGET_ID}
-        onLoad={handleEmbeddedLoad}
-        onReady={handleEmbeddedReady}
-        onError={handleEmbeddedError}
+        src="https://app.roofle.com/roof-quote-pro-embedded-widget.js?id=TyenXTFKs3GstadLv13T3"
+        strategy="afterInteractive"
+        async
+        onLoad={() => {
+          console.log('Embedded widget script loaded')
+          handleEmbeddedLoad()
+          
+          // Try to initialize the widget after script loads
+          setTimeout(() => {
+            const container = document.getElementById('roof-quote-pro-embedded')
+            if (container) {
+              // Check if widget auto-initialized
+              if (container.children.length > 0) {
+                console.log('Embedded widget auto-initialized')
+                handleEmbeddedReady()
+              } else {
+                // Try manual initialization
+                if (typeof window !== 'undefined' && (window as any).RoofQuotePro) {
+                  const roofle = (window as any).RoofQuotePro
+                  if (typeof roofle.init === 'function') {
+                    console.log('Manually initializing embedded widget')
+                    roofle.init({
+                      containerId: 'roof-quote-pro-embedded',
+                      widgetId: WIDGET_ID
+                    }).then(() => {
+                      handleEmbeddedReady()
+                    }).catch((error: any) => {
+                      console.error('Manual initialization failed:', error)
+                      handleEmbeddedError(error)
+                    })
+                  } else {
+                    console.log('RoofQuotePro.init not available, widget may auto-initialize')
+                    // Give it more time to auto-initialize
+                    setTimeout(() => {
+                      if (container.children.length > 0) {
+                        handleEmbeddedReady()
+                      } else {
+                        handleEmbeddedError({
+                          type: 'INITIALIZATION_FAILED',
+                          message: 'Widget failed to initialize automatically'
+                        })
+                      }
+                    }, 3000)
+                  }
+                } else {
+                  console.log('RoofQuotePro global not found, waiting for auto-initialization')
+                  setTimeout(() => {
+                    if (container.children.length > 0) {
+                      handleEmbeddedReady()
+                    } else {
+                      handleEmbeddedError({
+                        type: 'GLOBAL_NOT_FOUND',
+                        message: 'RoofQuotePro global object not found'
+                      })
+                    }
+                  }, 3000)
+                }
+              }
+            }
+          }, 1000)
+        }}
+        onError={(error) => {
+          console.error('Embedded widget script error:', error)
+          handleEmbeddedError(error)
+        }}
       />
 
       <div className="min-h-screen bg-gray-50">
         <main className="py-8">
           <Container>
             {/* Primary Widget Container */}
-            <div className="w-full max-w-6xl mx-auto mb-12">
-              {/* Show loading state while embedded widget is loading */}
+            <div className="w-full max-w-6xl mx-auto mb-12 relative">
+              {/* Always present container for embedded widget - this must exist for the script to find it */}
+              <div
+                id="roof-quote-pro-embedded"
+                className="w-full min-h-[800px] relative"
+              />
+
+              {/* Overlay loading state while embedded widget is loading */}
               {!embeddedState.isReady && !embeddedState.error && (
-                <RoofleLoader type="embedded" />
+                <div className="absolute inset-0 bg-white z-10 flex items-center justify-center">
+                  <RoofleLoader type="embedded" />
+                </div>
               )}
 
-              {/* Show error state if embedded widget failed */}
+              {/* Overlay error state if embedded widget failed */}
               {embeddedState.error && (
-                <RoofleError
-                  type="embedded"
-                  error={embeddedState.error}
-                  onRetry={retryEmbedded}
-                  retryCount={embeddedState.retryCount}
-                  maxRetries={MAX_RETRIES}
-                />
-              )}
-
-              {/* Embedded widget container - only show when ready */}
-              {embeddedState.isReady && (
-                <div
-                  id="roof-quote-pro-embedded"
-                  className="w-full min-h-[800px]"
-                />
+                <div className="absolute inset-0 bg-white z-10 flex items-center justify-center">
+                  <RoofleError
+                    type="embedded"
+                    error={embeddedState.error}
+                    onRetry={retryEmbedded}
+                    retryCount={embeddedState.retryCount}
+                    maxRetries={MAX_RETRIES}
+                  />
+                </div>
               )}
             </div>
-
-            {/* Show slideout loading indicator */}
-            {slideoutState.isLoaded && !slideoutState.isReady && (
-              <RoofleLoader type="slideout" />
-            )}
-
-            {/* Show slideout error if it failed */}
-            {slideoutState.error && (
-              <RoofleError
-                type="slideout"
-                error={slideoutState.error}
-                onRetry={retrySlideout}
-                retryCount={slideoutState.retryCount}
-                maxRetries={MAX_RETRIES}
-              />
-            )}
 
             {/* Fallback content - show if embedded widget has error */}
             {embeddedState.error && (
@@ -183,7 +259,7 @@ export default function FastQuoteClientPage() {
                         href="tel:888-422-5476"
                         className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-md font-medium transition-colors"
                       >
-                        📞 Call (888) 422-5476
+                        📞 Call (888) 665-3994
                       </Link>
                       <Link
                         href="/contact"

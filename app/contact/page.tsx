@@ -24,7 +24,7 @@ export default function ContactPage() {
                   <h3 className="font-semibold text-lg">Phone</h3>
                   <p className="text-gray-600 mb-1">Call us for a free quote</p>
                   <a href="tel:888-665-3994422-5476" className="text-primary font-semibold hover:underline">
-                    (888) 422-5476
+                    (888) 665-3994
                   </a>
                 </div>
               </div>

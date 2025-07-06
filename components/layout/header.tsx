@@ -7,6 +7,7 @@ import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Container } from "@/components/ui/container"
 import { cn } from "@/lib/utils"
+import RoofleScript from "@/components/roofle/RoofleScript"
 
 const navItems = [
   { label: "Home", href: "/" },
