@@ -12,7 +12,7 @@ const inter = Inter({ subsets: ["latin"], display: "swap" })
 export const metadata: Metadata = {
   title: "Cal Green Roofing | Professional Roofing Services in Southern California",
   description:
-    "Cal Green Roofing provides top-quality residential and commercial roofing services throughout Southern California. Free quotes available at (888) 665-3994.",
+    "Cal Green Roofing provides top-quality residential and commercial roofing services throughout Southern California. Free quotes available at (888) 422-5476.",
   keywords:
     "roofing, roof repair, roof replacement, commercial roofing, residential roofing, Southern California, Los Angeles, San Diego, Orange County, Riverside, San Bernardino, Ventura, roofing contractor, roof installation, roof inspection, emergency roof repair",
   authors: [{ name: "Cal Green Roofing" }],
@@ -95,6 +95,9 @@ export default function RootLayout({
         <meta name="theme-color" content="#2e7d32" />
         <meta name="msapplication-TileColor" content="#2e7d32" />
 
+        {/* Roofle slideout widget script */}
+        <script src="https://app.roofle.com/roof-quote-pro-widget.js?id=TyenXTFKs3GstadLv13T3" async></script>
+
         {/* Structured data for local business */}
         <script
           type="application/ld+json"
@@ -105,7 +108,7 @@ export default function RootLayout({
               name: "Cal Green Roofing",
               image: "https://calgreenroofing.com/logo.png",
               url: "https://calgreenroofing.com",
-              telephone: "(888) 665-3994",
+              telephone: "(888) 422-5476",
               email: "info@calgreenroofing.com",
               address: {
                 "@type": "PostalAddress",

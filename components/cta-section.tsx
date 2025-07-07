@@ -18,7 +18,7 @@ export default function CTASection() {
           <Link href="tel:888-665-3994422-5476">
             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
               <Phone className="mr-2 h-5 w-5" />
-              CALL (888) 665-3994
+              CALL (888) 422-5476
             </Button>
           </Link>
         </div>

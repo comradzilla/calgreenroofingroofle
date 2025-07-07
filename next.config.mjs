@@ -83,7 +83,8 @@ const nextConfig = {
         ]
       },
       {
-        // Standard CSP for all other pages (allows Roofle slideout widget but excludes fastquote pages)
+
+        // Standard CSP for all other pages (includes Roofle slideout widget support)
         source: '/((?!fastquote|fastquotetest).*)',
         headers: [
           {
@@ -100,8 +101,7 @@ const nextConfig = {
               "object-src 'none'",
               "base-uri 'self'",
               "form-action 'self' https://*.roofle.com https://forms.hsforms.com https://*.hubspot.com",
-              "frame-ancestors 'self' https://calgreenroofing.com https://www.calgreenroofing.com",
-              "worker-src 'self' blob:"
+              "frame-ancestors 'self' https://calgreenroofing.com https://www.calgreenroofing.com"
             ].join('; ')
           },
           {
