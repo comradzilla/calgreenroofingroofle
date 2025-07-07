@@ -259,7 +259,7 @@ export default function FastQuoteClientPage() {
                         href="tel:888-422-5476"
                         className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-md font-medium transition-colors"
                       >
-                        📞 Call (888) 665-3994
+                        📞 Call (888) 422-5476
                       </Link>
                       <Link
                         href="/contact"

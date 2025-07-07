@@ -99,7 +99,7 @@ export default function Footer() {
                 <Phone className="mr-2 h-5 w-5 text-[#ffc107] flex-shrink-0 mt-0.5" />
                 <span>
                   <Link href="tel:888-665-3994422-5476" className="hover:text-[#ffc107]">
-                    (888) 665-3994
+                    (888) 422-5476
                   </Link>
                 </span>
               </li>

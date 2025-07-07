@@ -11,10 +11,10 @@ export default function TopBar() {
           <Link
             href="tel:888-665-3994422-5476"
             className="bg-secondary text-primary px-4 py-2 rounded-full flex items-center gap-2 font-medium text-sm transition-colors hover:bg-secondary/90"
-            aria-label="Call us at (888) 665-3994"
+            aria-label="Call us at (888) 422-5476"
           >
             <Phone size={16} aria-hidden="true" />
-            <span className="hidden md:inline">CALL NOW</span> (888) 665-3994
+            <span className="hidden md:inline">CALL NOW</span> (888) 422-5476
           </Link>
         </div>
       </Container>
