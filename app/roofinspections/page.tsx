@@ -337,7 +337,7 @@ export default function RoofInspectionsPage() {
                 className="w-full bg-secondary text-primary hover:bg-secondary/90"
                 size="lg"
               >
-                CALL (888) 422-5476
+                CALL (888) 665-3994
               </CTAButton>
 
               <div className="mt-8">

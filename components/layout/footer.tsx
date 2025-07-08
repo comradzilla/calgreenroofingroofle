@@ -21,7 +21,7 @@ const footerLinks = {
   contact: [
     {
       icon: <Phone className="mr-2 h-5 w-5 text-secondary flex-shrink-0 mt-0.5" aria-hidden="true" />,
-      label: "(888) 422-5476",
+      label: "(888) 665-3994",
       href: "tel:888-665-3994422-5476",
     },
     {
